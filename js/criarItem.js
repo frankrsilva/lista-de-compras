@@ -79,6 +79,14 @@ export function criarItem(item) {
     imagemBotaoDeletar.alt = "deletar";
     botaoDeletar.appendChild(imagemBotaoDeletar);
 
+    botaoDeletar.addEventListener("mouseover", function() {
+        imagemBotaoDeletar.src = "img/delete-hover.svg"
+    })
+
+    botaoDeletar.addEventListener("mouseout", function() {
+        imagemBotaoDeletar.src = "img/delete.svg";
+    })
+
     botaoDeletar.addEventListener("click", function() {
         excluirItem(listaItem)
     })
@@ -90,6 +98,14 @@ export function criarItem(item) {
     imagemBotaoEditar.src = "img/edit.svg";
     imagemBotaoEditar.alt = "editar";
     botaoEditar.appendChild(imagemBotaoEditar);
+
+    botaoEditar.addEventListener("mouseover", function() {
+        imagemBotaoEditar.src = "img/edit-hover.svg"
+    })
+
+    botaoEditar.addEventListener("mouseout", function() {
+        imagemBotaoEditar.src = "img/edit.svg";
+    })
 
     botaoEditar.addEventListener("click", function() {
         editarItem(listaItemTitulo, itemData);
